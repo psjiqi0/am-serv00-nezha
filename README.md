@@ -1,4 +1,4 @@
-# [am-serv00-nezha](https://github.com/ansoncloud8/am-serv00-nezha)
+# [am-serv00-nezha](https://github.com/amclubs/am-serv00-nezha)
 在免费serv00服务器上一键部署nezhad面板和nezhad监控
 
 #
@@ -75,11 +75,11 @@ ssh <username>@<panel>.serv00.com
 
 - 3、进入到面板后复制下面代码到面板安装
 ```
-bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-dashboard.sh)
+bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
 - 4、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
-VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-dashboard.sh)
+VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
 
 - 4、然后按照以下提升输入
@@ -124,11 +124,11 @@ rm -rf ~/.nezha-dashboard
 ## 六、把serv00服务器添加到nezha上面(其它要监控和多台服务器都是此命令安装就可以)
 - 1、安装命令
 ```
-bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-agent.sh)
+bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent.sh)
 ```
 - 2、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
-VERSION=v0.20.5 bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-agent.sh)
+VERSION=v0.20.5 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent.sh)
 ```
 
 - 根据提示填写以下内容   
