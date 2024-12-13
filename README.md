@@ -79,7 +79,7 @@ bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/mai
 ```
 - 4、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
-VERSION=v0.19.9 bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-dashboard.sh)
+VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-dashboard.sh)
 ```
 
 - 4、然后按照以下提升输入
@@ -128,7 +128,7 @@ bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/mai
 ```
 - 2、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
-VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-agent.sh)
+VERSION=v0.20.5 bash <(curl -s https://raw.githubusercontent.com/ansoncloud8/am-serv00-nezha/main/install-agent.sh)
 ```
 
 - 根据提示填写以下内容   
