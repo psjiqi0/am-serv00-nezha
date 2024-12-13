@@ -6,7 +6,8 @@ WORKDIR="/home/${USERNAME}/.nezha-agent"
 download_agent() {
     if [ -z "$VERSION" ]; then
         # 如果没有传入VERSION变量，下载最新版本
-        DOWNLOAD_LINK="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_freebsd_amd64.zip"
+        #DOWNLOAD_LINK="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_freebsd_amd64.zip"
+	DOWNLOAD_LINK="https://github.com/amclubs/am-nezha-agent/releases/download/v0.20.5/nezha-agent_freebsd_amd64.zip"
 	VERSION="最新版本"
     else
         # 如果传入了VERSION变量，下载指定版本
