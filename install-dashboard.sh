@@ -20,7 +20,7 @@ get_current_version() {
 
 get_latest_version() {
     # Get latest release version number
-    RELEASE_LATEST=$(curl -s https://api.github.com/repos/ansoncloud8/am-nezha-freebsd/releases/latest | jq -r '.tag_name')
+    RELEASE_LATEST=$(curl -s https://api.github.com/repos/amclubs/am-nezha-freebsd/releases/latest | jq -r '.tag_name')
     if [[ -z "$RELEASE_LATEST" ]]; then
         echo "error: Failed to get the latest release version, please check your network."
         exit 1
@@ -31,11 +31,11 @@ get_latest_version() {
 download_nezha() {
     if [ -z "$VERSION" ]; then
         # 如果没有传入VERSION变量，下载最新版本
-        DOWNLOAD_LINK="https://github.com/ansoncloud8/am-nezha-freebsd/releases/latest/download/dashboard"
+        DOWNLOAD_LINK="https://github.com/amclubs/am-nezha-freebsd/releases/latest/download/dashboard"
         VERSION=$RELEASE_LATEST  # 将版本设置为最新版本
     else
         # 如果传入了VERSION变量，下载指定版本
-        DOWNLOAD_LINK="https://github.com/ansoncloud8/am-nezha-freebsd/releases/download/${VERSION}/dashboard"
+        DOWNLOAD_LINK="https://github.com/amclubs/am-nezha-freebsd/releases/download/${VERSION}/dashboard"
     fi
 
     if ! wget -qO "$INSTALLER_FILE" "$DOWNLOAD_LINK"; then
@@ -43,7 +43,7 @@ download_nezha() {
         return 1
     fi
     echo "下载版本：${VERSION}"
-	curl -s https://api.github.com/repos/ansoncloud8/am-nezha-freebsd/releases/latest | jq -r '.tag_name' > ${WORKDIR}/VERSION
+	curl -s https://api.github.com/repos/amclubs/am-nezha-freebsd/releases/latest | jq -r '.tag_name' > ${WORKDIR}/VERSION
     echo "${VERSION}" > "${WORKDIR}/VERSION"  # 将版本信息写入VERSION文件
     return 0
 }
