@@ -73,11 +73,12 @@ http://ip:9888/oauth2/callback
 ssh <username>@<panel>.serv00.com
 ```
 
-- 3、进入到面板后复制下面代码到面板安装
+- 2、进入到面板后复制下面代码到面板安装（与 V1 版本不兼容，对应agent探针也要 V0 版本）
 ```
 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
-- 4、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
+
+- 3、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
 VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
@@ -109,10 +110,9 @@ VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-ser
 
 <img width="1223" alt="serv00-3" src="https://github.com/user-attachments/assets/8a430a9d-3d55-47d7-846d-6eb5a8caca1a">
 
-- 7、dashboard保活命令
-```
- (crontab -l; echo "*/12 * * * * pgrep -x "dashboard" > /dev/null || nohup /home/${USER}/.nezha-dashboard/start.sh >/dev/null 2>&1 &") | crontab -
-```
+- 7、dashboard保活
+
+保活视频教程：[点击观看](https://youtu.be/zkGGklEaO2I?si=Ssqkk2fUM6fif8tO)
 
 - 8、dashboard卸载命令(卸载完就执行第3步的安装命令重新安装)
 ```
@@ -120,9 +120,19 @@ pgrep -f 'dashboard' | xargs -r kill
 rm -rf ~/.nezha-dashboard
 ```
 
+--------------------------------------------------------------------------------------------------------
+- 9、V1 版本面板安装（与 V0 版本不兼容，对应agent探针也要V1版本）
+```
+bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard-v1.sh)
+```
+- 4、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
+```
+VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard-v1.sh)
+```
+
 
 ## 六、把serv00服务器添加到nezha上面(其它要监控和多台服务器都是此命令安装就可以)
-- 1、安装命令
+- 1、安装命令 V0版本 （与 V1 版本不兼容，对应面板也要V0版本）
 ```
 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent.sh)
 ```
@@ -153,17 +163,14 @@ pgrep -f 'nezha-agent' | xargs -r kill
 rm -rf ~/.nezha-agent
 ```
 
-## 备注
-1、查看保活crontab任务
+--------------------------------------------------------------------------------------------------------
+- 5、V1 版本面板安装（与 V0 版本不兼容，对应面板也要V1版本）
 ```
-crontab -l
+bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
 ```
 
-上面命令完会显示下面信息就是有保活设置成功(如果没有就在面板上增加下面定时任务)
-```
-*/12 * * * * pgrep -x "dashboard" > /dev/null || nohup /home/<username>/.nezha-dashboard/start.sh >/dev/null 2>&1 &
-*/12 * * * * pgrep -x "nezha-agent" > /dev/null || nohup /home/<username>/.nezha-agent/start.sh >/dev/null 2>&1 &
-```
+## 备注
+保活视频教程：[点击观看](https://youtu.be/zkGGklEaO2I?si=Ssqkk2fUM6fif8tO)
 
 # 
  <center><details><summary><strong> [点击展开] 赞赏支持 ~🧧</strong></summary>
