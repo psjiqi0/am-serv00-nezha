@@ -73,7 +73,7 @@ generate_config() {
         nohup ${WORKDIR}/dashboard >/dev/null 2>&1 &
         sleep 5
 
-        dashboard_pid=$(ps aux | grep "${WORKDIR}/dashboard" | grep -v 'grep' | awk '{print $2}')
+        dashboard_pid=$(ps aux | grep "${WORKDIR}" | grep -v 'grep' | awk '{print $2}')
         if [ -n "$dashboard_pid" ]; then
             kill -9 "$dashboard_pid"
             echo "初始化nezha-dashboard配置成功"
@@ -162,7 +162,7 @@ uninstall_nezha() {
   reading "\n确定要卸载吗？【y/n】: " choice
     case "$choice" in
        [Yy])
-          kill -9 $(ps aux | grep '$WORKDIR/dashboard' | awk '{print $2}')
+          kill -9 $(ps aux | grep "${WORKDIR}" | grep -v 'grep' | awk '{print $2}')
 		  echo "删除安装目录: $WORKDIR"
           rm -rf $WORKDIR
           ;;
@@ -186,7 +186,7 @@ restart_nezha() {
 kill_nezha() {
 reading "\n关闭nezha-dashboar进程，确定继续清理吗？【y/n】: " choice
   case "$choice" in
-    [Yy]) kill -9 $(ps aux | grep '$WORKDIR/dashboard' | awk '{print $2}') ;;
+    [Yy]) kill -9 $(ps aux | grep "${WORKDIR}" | grep -v 'grep' | awk '{print $2}') ;;
        *) menu ;;
   esac
 }
