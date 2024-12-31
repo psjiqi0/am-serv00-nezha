@@ -20,7 +20,8 @@ get_current_version() {
 
 get_latest_version() {
     # Get latest release version number
-    RELEASE_LATEST=$(curl -s https://api.github.com/repos/amclubs/am-nezha-freebsd/releases/latest | jq -r '.tag_name')
+    #RELEASE_LATEST=$(curl -s https://api.github.com/repos/amclubs/am-nezha-freebsd/releases/latest | jq -r '.tag_name')
+    RELEASE_LATEST="v0.20.13"
     if [[ -z "$RELEASE_LATEST" ]]; then
         echo "error: Failed to get the latest release version, please check your network."
         exit 1
@@ -31,7 +32,7 @@ get_latest_version() {
 download_nezha() {
     if [ -z "$VERSION" ]; then
         # 如果没有传入VERSION变量，下载最新版本
-        DOWNLOAD_LINK="https://github.com/amclubs/am-nezha-freebsd/releases/latest/download/dashboard"
+        DOWNLOAD_LINK="https://github.com/amclubs/am-nezha-freebsd/releases/download/v0.20.13/dashboard"
         VERSION=$RELEASE_LATEST  # 将版本设置为最新版本
     else
         # 如果传入了VERSION变量，下载指定版本
