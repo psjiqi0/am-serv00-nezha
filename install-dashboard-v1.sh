@@ -48,9 +48,9 @@ download_nezha() {
     echo "解压成功。"
 
     if [ -e "$WORKDIR/nezha-dashboard" ]; then
-	       mv $WORKDIR/nezha-dashboard ${WORKDIR}/dashboard
-	       chmod +x ${WORKDIR}/dashboard
-								rm -f $WORKDIR/data/config.yaml
+	mv $WORKDIR/nezha-dashboard ${WORKDIR}/dashboard
+	chmod +x ${WORKDIR}/dashboard
+	rm -f $WORKDIR/data/config.yaml
         echo "文件夹已重命名为 dashboard。"
     else
         echo "error: 解压后的文件夹不存在，可能解压失败或文件结构已更改。"
@@ -97,7 +97,7 @@ generate_config() {
     fi
 
     if [ -e "${WORKDIR}/data/config.yaml" ]; then
-								sed -i '' "s/8008/${nz_site_port}/" ${WORKDIR}/data/config.yaml
+	sed -i '' "s/8008/${nz_site_port}/" ${WORKDIR}/data/config.yaml
         echo "端口已更新为: ${nz_site_port}"
     else
         echo "配置文件不存在，更新端口失败"
@@ -119,12 +119,13 @@ EOF
 run_nezha(){
     nohup ${WORKDIR}/start.sh >/dev/null 2>&1 &
     IP_ADDRESS=$(devil vhost list public | awk '/Public addresses/ {flag=1; next} flag && $1 ~ /^[0-9.]+$/ {print $1; exit}' | xargs echo -n)
+    IP_PORT=$(grep -E '^\s*listenport:' "${WORKDIR}/data/config.yaml" | awk '{print $2}')
     printf "nezha-dashboard已经准备就绪，请按下回车键启动\n"
     read
     printf "正在启动nezha-dashboard，请耐心等待...\n"
     sleep 3
     if pgrep -f "$WORKDIR/dashboard" > /dev/null; then
-        echo "nezha-dashboard 已启动，请使用浏览器访问 http://${IP_ADDRESS}:${nz_site_port} 进行进一步配置。"
+        echo "nezha-dashboard 已启动，请使用浏览器访问 http://${IP_ADDRESS}:${IP_PORT} 进行进一步配置。"
         echo "如果你配置了 Proxy 或者 Cloudflared Argo Tunnel，也可以使用域名访问 nezha-dashboard。"
         echo 
     else
@@ -163,7 +164,7 @@ uninstall_nezha() {
     case "$choice" in
        [Yy])
           kill -9 $(ps aux | grep "${WORKDIR}" | grep -v 'grep' | awk '{print $2}')
-		  echo "删除安装目录: $WORKDIR"
+	  echo "删除安装目录: $WORKDIR"
           rm -rf $WORKDIR
           ;;
         [Nn]) exit 0 ;;
