@@ -66,9 +66,9 @@ generate_config() {
 
     printf "请输入面板的agentsecretkey: "
     read -r your_agent_secret
-				printf "请输入Agent对接地址: "
+    printf "请输入Agent对接地址: "
     read -r your_dashboard_server
-				printf "请输入uuid(回车默认生成): "
+    printf "请输入uuid(回车默认生成): "
     read -r uuid
 
     if [ -z "$your_agent_secret" ]; then
@@ -170,7 +170,7 @@ uninstall_agent() {
     case "$choice" in
        [Yy])
           kill -9 $(ps aux | grep "${WORKDIR}" | grep -v 'grep' | awk '{print $2}')
-		  echo "删除安装目录: $WORKDIR"
+	  echo "删除安装目录: $WORKDIR"
           rm -rf $WORKDIR
           ;;
         [Nn]) exit 0 ;;
