@@ -120,6 +120,7 @@ run_nezha(){
     nohup ${WORKDIR}/start.sh >/dev/null 2>&1 &
     IP_ADDRESS=$(devil vhost list public | awk '/Public addresses/ {flag=1; next} flag && $1 ~ /^[0-9.]+$/ {print $1; exit}' | xargs echo -n)
     IP_PORT=$(grep -E '^\s*listenport:' "${WORKDIR}/data/config.yaml" | awk '{print $2}')
+    AGENT_SECRETKEY=$(grep -E '^\s*agentsecretkey:' "${WORKDIR}/data/config.yaml" | awk '{print $2}')
     printf "nezha-dashboard已经准备就绪，请按下回车键启动\n"
     read
     printf "正在启动nezha-dashboard，请耐心等待...\n"
@@ -127,6 +128,7 @@ run_nezha(){
     if pgrep -f "$WORKDIR/dashboard" > /dev/null; then
         echo "nezha-dashboard 已启动，请使用浏览器访问 http://${IP_ADDRESS}:${IP_PORT} 进行进一步配置。"
         echo "如果你配置了 Proxy 或者 Cloudflared Argo Tunnel，也可以使用域名访问 nezha-dashboard。"
+	echo "nezha-dashboard的agentsecretkey:${AGENT_SECRETKEY}"
         echo 
     else
         rm -rf "${WORKDIR}"
