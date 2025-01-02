@@ -168,6 +168,10 @@ rm -rf ~/.nezha-agent
 ```
 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
 ```
+- 6、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
+```
+VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
+```
 
 ## 备注
 保活视频教程：[点击观看](https://youtu.be/zkGGklEaO2I?si=Ssqkk2fUM6fif8tO)
