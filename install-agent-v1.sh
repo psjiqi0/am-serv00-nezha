@@ -128,7 +128,7 @@ run_agent(){
     printf "nezha-agent已经准备就绪，请按下回车键启动\n"
     read
     printf "正在启动nezha-agent，请耐心等待...\n"
-    sleep 3
+    sleep 5
     if pgrep -f "${WORKDIR}/nezha-agent" > /dev/null; then
         echo "nezha-agent 已启动！"
         echo "如果面板处未上线，请检查参数是否填写正确，并停止 agent 进程，删除已安装的 agent 后重新安装！"
