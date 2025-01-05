@@ -1,5 +1,5 @@
 # [am-serv00-nezha](https://github.com/amclubs/am-serv00-nezha)
-在免费serv00服务器上一键部署nezhad面板和nezhad监控
+免费serv00服务器上部署nezha-dashboard哪吒面板和nezha-agent哪吒探针监控
 
 #
 ▶️ **新人[YouTube](https://youtube.com/@AM_CLUB)** 需要您的支持，请务必帮我**点赞**、**关注**、**打开小铃铛**，***十分感谢！！！*** ✅
