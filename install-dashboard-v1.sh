@@ -124,7 +124,7 @@ run_nezha(){
     printf "nezha-dashboard已经准备就绪，请按下回车键启动\n"
     read
     printf "正在启动nezha-dashboard，请耐心等待...\n"
-    sleep 3
+    sleep 5
     if pgrep -f "$WORKDIR/dashboard" > /dev/null; then
         echo "nezha-dashboard 已启动，请使用浏览器访问 http://${IP_ADDRESS}:${IP_PORT} 进行进一步配置。"
         echo "如果你配置了 Proxy 或者 Cloudflared Argo Tunnel，也可以使用域名访问 nezha-dashboard。"
