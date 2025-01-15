@@ -9,8 +9,9 @@
 
 # 在serv00服务器上部署nezha监控
 
-- 演示地址：https://nezhe.amclubs.us.kg
+- V0演示地址：https://nezhe.amclubs.us.kg
 - V0版本部署视频教程：[小白教程](https://youtu.be/vXNpooT7N-k)
+- V1演示地址：https://nezha.amclubs.nyc.mn
 - V1版本部署视频教程：[小白教程]( https://youtu.be/Ga2ucHxsaJM)
 
 ## 一、需要准备的前提资料
