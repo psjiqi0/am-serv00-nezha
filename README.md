@@ -10,7 +10,8 @@
 # 在serv00服务器上部署nezha监控
 
 - 演示地址：https://nezhe.amclubs.us.kg
-- 部署视频教程：[小白教程](https://youtu.be/vXNpooT7N-k)
+- V0版本部署视频教程：[小白教程](https://youtu.be/vXNpooT7N-k)
+- V1版本部署视频教程：[小白教程]( https://youtu.be/Ga2ucHxsaJM)
 
 ## 一、需要准备的前提资料
 ### 1、首先注册一个Serv00账号，建议使用gmail邮箱注册，注册好会有一封邮箱上面写着你注册时的用户名和密码
