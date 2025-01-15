@@ -176,6 +176,7 @@ VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv0
 ```
 
 ## 备注
+保活和重启项目教程：https://github.com/amclubs/am-serv00-github-action
 保活视频教程：[点击观看](https://youtu.be/zkGGklEaO2I?si=Ssqkk2fUM6fif8tO)
 
 # 
