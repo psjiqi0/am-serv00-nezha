@@ -211,10 +211,10 @@ reading "\n清理所有进程将退出ssh连接，确定继续清理吗？【y/n
 menu() {
     clear
     echo ""
-    purple "=== openwrt特别版 serv00主控端口 V1哪吒探针 一键安装脚本 ===\n"
+    purple "=== openwrt特别版 serv00被控端口 V1哪吒探针 一键安装脚本 ===\n"
     purple "婳婳修改版\n"
     echo -e "${green}支持openwrt ubuntu debian liunx  openwrt    ：${yellow}注意${re}"
-    echo -e "${green}openwrt特别版主要控制openwrt     
+    echo -e "${green}openwrt特别版被要控制openwrt     
     echo -e "${green}请严格按照教程     
     echo -e "${green}请严格按照教程     
     echo -e "${green}请严格按照教程   
