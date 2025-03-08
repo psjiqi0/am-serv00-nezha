@@ -1,5 +1,5 @@
 #!/bin/bash
-# 定义颜
+
 # 定义颜色
 re="\033[0m"
 red="\033[1;91m"
@@ -211,13 +211,13 @@ reading "\n清理所有进程将退出ssh连接，确定继续清理吗？【y/n
 menu() {
     clear
     echo ""
-    purple "=== openwrt serv00 V1哪吒探针 一键安装脚本 ===\n"
-    purple "婳婳特改版\n"
-    echo -e "${green}支持ubuntu debian liunx openwrt    ：${yellow}openwrt需注意教程${re}"
-    echo -e "${green}openwrt需注意教程
-    echo -e "${green}openwrt需注意教程
-    echo -e "${green}openwrt需注意教程
-
+    purple "=== AM科技 serv00 | nezha-agent V1哪吒探针 一键安装脚本 ===\n"
+    purple "转载请著名出处，请勿滥用\n"
+    echo -e "${green}AM科技 YouTube频道    ：${yellow}https://youtube.com/@AM_CLUB${re}"
+    echo -e "${green}AM科技 GitHub仓库     ：${yellow}https://github.com/amclubs${re}"
+    echo -e "${green}AM科技 个人博客       ：${yellow}https://am.809098.xyz${re}"
+    echo -e "${green}AM科技 TG交流群组     ：${yellow}https://t.me/AM_CLUBS${re}"
+    echo -e "${green}AM科技 脚本视频教程   ：${yellow}https://youtu.be/2B5yN09Wd_s${re}"
     echo   "======================="
     green  "1. 安装nezha-agent"
     echo   "======================="
