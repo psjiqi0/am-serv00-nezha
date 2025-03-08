@@ -1,16 +1,8 @@
 #!/bin/bash
 
 # 定义颜色
-re="\033[0m"
-red="\033[1;91m"
-green="\e[1;32m"
-yellow="\e[1;33m"
-purple="\e[1;35m"
-red() { echo -e "\e[1;91m$1\033[0m"; }
-green() { echo -e "\e[1;32m$1\033[0m"; }
-yellow() { echo -e "\e[1;33m$1\033[0m"; }
-purple() { echo -e "\e[1;35m$1\033[0m"; }
-reading() { read -p "$(red "$1")" "$2"; }
+echo -e "${green}AM科技 YouTube频道    ：${yellow}https://new-youtube-link${re}"
+
 
 USERNAME=$(whoami) && \
 WORKDIR="/home/${USERNAME}/.nezha-agent"
