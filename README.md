@@ -103,7 +103,7 @@ pgrep -f 'dashboard' | xargs -r kill
 rm -rf ~/.nezha-dashboard
 ```
 
-
+## openwrt需在获取被控端nehza目录文件方便以后导入无需
 
 
 
