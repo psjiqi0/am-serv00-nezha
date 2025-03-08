@@ -56,7 +56,7 @@ http://ip:9888/oauth2/callback
 
 ## 五、开始安装
 
-- 1、进入到面板后复制下面代码到面板安装（与 V1 版本不兼容，对应agent探针也要 V0 版本）
+- 1、进入到面板后复制下面代码到面板安装（V1 ）
 ```
 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
@@ -103,21 +103,14 @@ pgrep -f 'dashboard' | xargs -r kill
 rm -rf ~/.nezha-dashboard
 ```
 
---------------------------------------------------------------------------------------------------------
-- 9、V1 版本面板安装（与 V0 版本不兼容，对应agent探针也要V1版本）
-```
-bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard-v1.sh)
-```
-- 4、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
-```
-VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard-v1.sh)
-```
+
+
 
 
 ## 六、把serv00服务器添加到nezha上面(其它要监控和多台服务器都是此命令安装就可以)
 - 1、V1 版本面板安装（与 V0 版本不兼容，对应面板也要V1版本）
 ```
-bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
+bash <(curl -s https://raw.githubusercontent.com/psjiqi0/am-serv00-nezha/refs/heads/main/install-agent-v1.sh)
 ```
 - 2、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
