@@ -207,14 +207,13 @@ reading "\n清理所有进程将退出ssh连接，确定继续清理吗？【y/n
 menu() {
     clear
     echo ""
-    purple "=== AM科技 serv00 | nezha-dashboard V1哪吒面板 一键安装脚本 ===\n"
-    purple "转载请著名出处，请勿滥用\n"
-    echo -e "${green}AM科技 YouTube频道    ：${yellow}https://youtube.com/@AM_CLUB${re}"
-    echo -e "${green}AM科技 GitHub仓库     ：${yellow}https://github.com/amclubs${re}"
-    echo -e "${green}AM科技 个人博客       ：${yellow}https://am.809098.xyz${re}"
-    echo -e "${green}AM科技 TG交流群组     ：${yellow}https://t.me/AM_CLUBS${re}"
-    echo -e "${green}AM科技 脚本视频教程   ：${yellow}https://youtu.be/2B5yN09Wd_s${re}"
-    echo   "======================="
+    purple "=== openwrt特别版 serv00主控端口 V1哪吒探针 一键安装脚本 ===\n"
+    purple "婳婳修改版\n"
+    echo -e "${green}支持openwrt ubuntu debian liunx  openwrt    ：${yellow}注意${re}"
+    echo -e "${green}openwrt特别版主要控制openwrt     
+    echo -e "${green}请严格按照教程     
+    echo -e "${green}请严格按照教程     
+    echo -e "${green}请严格按照教程 
     green  "1. 安装nezha-dashboard"
     echo   "======================="
     red    "2. 卸载nezha-dashboard"
