@@ -1,4 +1,5 @@
-
+install-dashboard-v1.sh主控端
+install-agent-v1.sh被控端
 
 ## 一、需要准备的前提资料
 ### 1、首先注册一个Serv00账号，建议使用gmail邮箱注册，注册好会有一封邮箱上面写着你注册时的用户名和密码
