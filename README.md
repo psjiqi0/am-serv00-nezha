@@ -1,28 +1,13 @@
-# [am-serv00-nezha](https://github.com/amclubs/am-serv00-nezha)
-免费serv00服务器上部署nezha-dashboard哪吒面板和nezha-agent哪吒探针监控
 
-#
-▶️ **新人[YouTube](https://youtube.com/@am_clubs?sub_confirmation=1)** 需要您的支持，请务必帮我**点赞**、**关注**、**打开小铃铛**，***十分感谢！！！*** ✅
-</br>🎁请 **follow** 我的[GitHub](https://github.com/amclubs)、给我所有项目一个 **Star** 星星（拜托了）！你的支持是我不断前进的动力！ 💖
-</br>✅**解锁更多技能** [加入TG群【am_clubs】](https://t.me/am_clubs)、[YouTube频道【@am_clubs】](https://youtube.com/@am_clubs?sub_confirmation=1)、[【博客(国内)】](https://amclubss.com)、[【博客(国际)】](https://amclubs.blogspot.com) 
-</br>✅点击观看教程[CLoudflare免费节点](https://www.youtube.com/playlist?list=PLGVQi7TjHKXbrY0Pk8gm3T7m8MZ-InquF) | [VPS搭建节点](https://www.youtube.com/playlist?list=PLGVQi7TjHKXaVlrHP9Du61CaEThYCQaiY) | [获取免费域名](https://www.youtube.com/playlist?list=PLGVQi7TjHKXZGODTvB8DEervrmHANQ1AR) | [免费VPN](https://www.youtube.com/playlist?list=PLGVQi7TjHKXY7V2JF-ShRSVwGANlZULdk) | [IPTV源](https://www.youtube.com/playlist?list=PLGVQi7TjHKXbkozDYVsDRJhbnNaEOC76w) | [Mac和Win工具](https://www.youtube.com/playlist?list=PLGVQi7TjHKXYBWu65yP8E08HxAu9LbCWm) | [AI分享](https://www.youtube.com/playlist?list=PLGVQi7TjHKXaodkM-mS-2Nwggwc5wRjqY)
-
-# 在serv00服务器上部署nezha监控
-
-- V0演示地址：https://nezhe.amclubs.us.kg
-- V0版本部署视频教程：[小白教程](https://youtu.be/vXNpooT7N-k)
-- V1演示地址：https://nezha.amclubs.nyc.mn
-- V1版本部署视频教程：[小白教程]( https://youtu.be/Ga2ucHxsaJM)
 
 ## 一、需要准备的前提资料
 ### 1、首先注册一个Serv00账号，建议使用gmail邮箱注册，注册好会有一封邮箱上面写着你注册时的用户名和密码
 - 注册帐号地址：https://serv00.com
-- 注册帐号请查看下面视频：<a href="https://youtu.be/NET1FTlfDTs">[点击观看视频教程]</a>
+
 
 ![image](https://github.com/user-attachments/assets/b3b3733b-3553-45dd-9346-c4664251755f)
   
-### 2、加下群发送关键字 ssh 获取连接工具
-Telegram频道：https://t.me/AM_CLUBS
+### 2、连接ssh 工具
 
 ## 三、安装前需准备好以下工作
 - 1、登入邮件里面发你的 DevilWEB webpanel 后面的网址，进入网站后点击 Change languag 把面板改成英文
@@ -40,8 +25,7 @@ devil binexec on
 
 - 6、如果想用域名要解析你添加到serv00里面的A记录即可。找到 WWW websites 点击后面的 Mange SSL 就可以看到二个IP，一般添加第一个IP就可以了。
 - 7、添加自己的域名开启DNS的话 在左边栏 DNS zones也可以看到A记录
-- 免费us.kg域名申请教程：<a href="https://youtu.be/cI36vtXuQrM">[点击观看视频教程]</a>
-- 免费dynv6域名申请教程：<a href="https://youtu.be/Nl0BV2ocYb8">[点击观看视频教程]</a>
+- 8、推荐cloudflare域名解析A记录
 
 ## 四、 准备Github里面的三个东西，按照以下步骤后保存到一边
 - 1、进入Gihub点击右上角头像找到 Settings 点击后往下拉找到左边栏下面的 Developer settings 点击
@@ -70,17 +54,13 @@ http://ip:9888/oauth2/callback
 ![image](https://github.com/user-attachments/assets/8fe58fbc-e148-4190-84f2-8bc75850b412)
 
 ## 五、开始安装
-- 1、用我们前面下载的工具登入SSH(有些工具 第一次连接还是会弹出输出密码记得点X 然后再添加密码 )
-```
-ssh <username>@<panel>.serv00.com
-```
 
-- 2、进入到面板后复制下面代码到面板安装（与 V1 版本不兼容，对应agent探针也要 V0 版本）
+- 1、进入到面板后复制下面代码到面板安装（与 V1 版本不兼容，对应agent探针也要 V0 版本）
 ```
 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
 
-- 3、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
+- 2、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
 VERSION=v0.20.13 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-dashboard.sh)
 ```
@@ -134,26 +114,19 @@ VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv0
 
 
 ## 六、把serv00服务器添加到nezha上面(其它要监控和多台服务器都是此命令安装就可以)
-- 1、安装命令 V0版本 （与 V1 版本不兼容，对应面板也要V0版本）
+- 1、V1 版本面板安装（与 V0 版本不兼容，对应面板也要V1版本）
 ```
-bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent.sh)
+bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
 ```
 - 2、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
 ```
-VERSION=v0.20.5 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent.sh)
+VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
 ```
-
-- 根据提示填写以下内容   
-| 变量 | 值 | 
-|--------|---------|
-|请输入 Dashboard 站点地址	|解析的IP或者域名
-|请输入面板 RPC 端口：	|第二个端口
-|请输入 Agent 密钥	|面板服务器后面的密钥(面板新加的服务器配置)
-
-- 2、接下来直接回车就行了。然后我们去到网址点击服务器前面的图像就会看到我们的服务器在线了。
-<img width="959" alt="serv00-4" src="https://github.com/user-attachments/assets/693d4297-b777-41b8-9f66-2323edecca0b">
-<img width="1239" alt="serv00-5" src="https://github.com/user-attachments/assets/289746b1-5bbf-494a-b38a-72329a104195">
-
+重启
+```
+bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/am_restart_agent.sh)
+```
+## 七、保活
 - 3、agent保活命令
 ```
   (crontab -l; echo "*/12 * * * * pgrep -x "nezha-agent" > /dev/null || nohup /home/${USER}/.nezha-agent/start.sh >/dev/null 2>&1 &") | crontab -
@@ -169,38 +142,11 @@ pgrep -f 'nezha-agent' | xargs -r kill
 rm -rf ~/.nezha-agent
 ```
 
---------------------------------------------------------------------------------------------------------
-- 5、V1 版本面板安装（与 V0 版本不兼容，对应面板也要V1版本）
-```
-bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
-```
-- 6、指定版本下载安装(把VERSION=自己修改对应要安装的版本号)
-```
-VERSION=v1.5.1 bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/install-agent-v1.sh)
-```
-重启
-```
-bash <(curl -s https://raw.githubusercontent.com/amclubs/am-serv00-nezha/main/am_restart_agent.sh)
-```
 
-## 备注
-保活和重启项目教程：https://github.com/amclubs/am-serv00-github-action
-保活视频教程：[点击观看](https://youtu.be/zkGGklEaO2I?si=Ssqkk2fUM6fif8tO)
 
-# 
-<center>
-<details><summary><strong> [点击展开] 赞赏支持 ~🧧</strong></summary>
-*我非常感谢您的赞赏和支持，它们将极大地激励我继续创新，持续产生有价值的工作。*
 
-- **USDT-TRC20:** `TWTxUyay6QJN3K4fs4kvJTT8Zfa2mWTwDD`
-- **TRX-TRC20:** `TWTxUyay6QJN3K4fs4kvJTT8Zfa2mWTwDD`
 
-<div align="center"> 
-  <img src="https://github.com/user-attachments/assets/e6cdc42a-6374-4722-b833-601738f72196" width="200"></br> 
-  TRC10/TRC20扫码支付 
-</div> 
-</details>
-</center>
+
 
  #
  免责声明:
